@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakshi — Focus Mode</title>
+  <link rel="stylesheet" href="pause.css">
+</head>
+<body>
+  <main class="pause-container">
+    <div class="pause-card">
+      <div class="flame-symbol" id="symbolIcon"></div>
+      
+      <span class="eyebrow" id="pageEyebrow">A MOMENT TO WITNESS</span>
+      
+      <div class="intention-banner">
+        <span class="intention-label" id="intentionLabel">You set out to:</span>
+        <h1 class="intention-heading" id="userIntention">Loading intention...</h1>
+      </div>
+
+      <!-- Digital Wellbeing App Paused Banner -->
+      <div class="wellbeing-banner" id="wellbeingBanner" style="display: none;">
+        <span class="wellbeing-badge">Digital Wellbeing · Focus Mode</span>
+        <p class="wellbeing-message" id="wellbeingMessage">This site is turned off until your work session finishes.</p>
+        <div class="wellbeing-timer" id="wellbeingTimer">Session finishes soon</div>
+      </div>
+
+      <div class="teaching-box" id="teachingBox">
+        <p class="teaching-text" id="teachingText">Loading reflection...</p>
+        <cite class="teaching-source" id="teachingSource"></cite>
+      </div>
+
+      <div class="action-buttons">
+        <button id="returnBtn" class="btn btn-primary">
+          Return to my work
+        </button>
+        <button id="continueBtn" class="btn btn-secondary">
+          Continue anyway
+        </button>
+      </div>
+
+      <p class="philosophy-note" id="philosophyNote">
+        No judgment. No points lost. Only pure awareness.
+      </p>
+    </div>
+  </main>
+
+  <script src="pause.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "notebook",
+    "name": "Hardbound Focus Journal",
+    "description": "Lined 160-page journal with ribbon marker to write your daily intentions and thoughts before sitting.",
+    "cost": 15,
+    "image": "/goodies/notebook.svg"
+  },
+  {
+    "id": "pens",
+    "name": "Ergonomic Fineliner Pen Set",
+    "description": "Smooth, smudge-resistant black ink pens designed for comfortable reflection writing and study notes.",
+    "cost": 20,
+    "image": "/goodies/pens.svg"
+  },
+  {
+    "id": "stickers",
+    "name": "Mindful Study Vinyl Sticker Pack",
+    "description": "Durable matte stickers featuring 'One Idea', 'Witness the Mind', and minimal focus emblems for your laptop.",
+    "cost": 10,
+    "image": "/goodies/stickers.svg"
+  },
+  {
+    "id": "bookmark",
+    "name": "Brass & Silk Heritage Bookmark",
+    "description": "Engraved brass metal bookmark with tassel, keeping your place in profound volumes without dog-earing.",
+    "cost": 12,
+    "image": "/goodies/bookmark.svg"
+  },
+  {
+    "id": "bottle",
+    "name": "Insulated Study Desk Water Bottle",
+    "description": "Stainless steel double-wall water bottle that keeps tea warm or water cold throughout deep study sessions.",
+    "cost": 35,
+    "image": "/goodies/bottle.svg"
+  },
+  {
+    "id": "plant",
+    "name": "Zen Desk Succulent in Terracotta Pot",
+    "description": "Low-maintenance living plant to introduce a gentle touch of natural calm and life to your study desk.",
+    "cost": 25,
+    "image": "/goodies/plant.svg"
+  },
+  {
+    "id": "headphones-coupon",
+    "name": "Noise-Cancelling Headphones Coupon",
+    "description": "Exclusive voucher for active noise-cancelling headphones to practice sensory quietude (Pratyahara).",
+    "cost": 45,
+    "image": "/goodies/headphones.svg"
+  },
+  {
+    "id": "book-voucher",
+    "name": "Ramakrishna Mission Book Voucher",
+    "description": "Redeemable voucher for authentic editions of Swami Vivekananda’s Complete Works and Raja Yoga.",
+    "cost": 30,
+    "image": "/goodies/voucher.svg"
+  }
+]

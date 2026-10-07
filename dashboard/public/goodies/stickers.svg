@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" fill="#fdf4ff" rx="16"/>
+  <!-- Sticker 1: Sun / Focus -->
+  <g transform="translate(40, 45) rotate(-8)">
+    <rect width="55" height="55" rx="12" fill="#d946ef"/>
+    <circle cx="27" cy="27" r="14" fill="#fae8ff"/>
+    <circle cx="27" cy="27" r="6" fill="#a21caf"/>
+  </g>
+  <!-- Sticker 2: Hexagon Sakshi Eye -->
+  <g transform="translate(105, 55) rotate(12)">
+    <polygon points="30,5 55,20 55,50 30,65 5,50 5,20" fill="#a855f7"/>
+    <circle cx="30" cy="35" r="10" fill="#f3e8ff"/>
+    <circle cx="30" cy="35" r="4" fill="#7e22ce"/>
+  </g>
+  <!-- Sticker 3: Pill badge -->
+  <g transform="translate(60, 115) rotate(5)">
+    <rect width="85" height="36" rx="18" fill="#ec4899"/>
+    <text x="42" y="23" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="12" fill="#fdf2f8">ONE IDEA</text>
+  </g>
+</svg>

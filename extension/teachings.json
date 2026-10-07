@@ -1,0 +1,30 @@
+[
+  {
+    "id": "teaching-concentration-1",
+    "theme": "concentration",
+    "text": "TODO: Verify exact quote regarding the power of concentration and gathering the scattered rays of the mind.",
+    "source": "TODO: Verify against Raja Yoga, Chapter 1 / Complete Works Vol 1",
+    "verified": false
+  },
+  {
+    "id": "teaching-fear-1",
+    "theme": "fear",
+    "text": "TODO: Verify exact quote on fearlessness, strength, and facing the brute.",
+    "source": "TODO: Verify against Lectures from Colombo to Almora / Complete Works Vol 3",
+    "verified": false
+  },
+  {
+    "id": "teaching-self-belief-1",
+    "theme": "self-belief",
+    "text": "TODO: Verify exact quote regarding faith in oneself and inner divine strength.",
+    "source": "TODO: Verify against Practical Vedanta / Complete Works Vol 2",
+    "verified": false
+  },
+  {
+    "id": "teaching-patience-1",
+    "theme": "patience",
+    "text": "TODO: Verify exact quote on patient, steady discipline in mastering the restless senses.",
+    "source": "TODO: Verify against Raja Yoga, Dhyana and Samadhi / Complete Works Vol 1",
+    "verified": false
+  }
+]

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakshi — Options & Privacy</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-wrapper">
+    <!-- Header -->
+    <header class="options-header">
+      <div class="brand">
+        <div class="logo-orb"></div>
+        <div>
+          <h1>Sakshi Settings</h1>
+          <p class="subtitle">Mindful attention configuration & data controls</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="options-content">
+      <!-- Section 1: Privacy Declaration -->
+      <section class="card card-privacy">
+        <div class="card-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <h2>Privacy & Data Sovereignty</h2>
+        </div>
+        <p class="privacy-text">
+          Sakshi is built on the philosophy of the impartial witness.
+          <strong>All data stays on your device.</strong>
+          There are no analytics trackers, no screenshots, and no screen recordings.
+          The extension strictly records the active tab URL and page title to your local storage (<kbd>chrome.storage.local</kbd>).
+          If you provide a Gemini API key, only the URL and page title of ambiguous pages are transmitted to Google's Gemini endpoint to classify relevance.
+        </p>
+      </section>
+
+      <!-- Section 2: Gemini API -->
+      <section class="card">
+        <div class="card-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          </svg>
+          <h2>Gemini Flash AI Classification</h2>
+        </div>
+        <div class="form-group">
+          <label for="geminiApiKey">Google Gemini API Key</label>
+          <div class="input-with-button">
+            <input type="password" id="geminiApiKey" placeholder="Enter your Gemini API key (AIza...)" autocomplete="off">
+            <button type="button" id="toggleKeyVisibility" class="btn btn-secondary btn-sm">Show</button>
+            <button type="button" id="testKeyBtn" class="btn btn-secondary btn-sm">Test Key</button>
+          </div>
+          <span class="field-hint">Uses <code>gemini-2.0-flash</code> for ambiguous pages and YouTube educational vs entertainment detection. If not set, Sakshi defaults to static rule lists.</span>
+          <div id="testKeyResult" class="test-result"></div>
+        </div>
+      </section>
+
+      <!-- Section 3: Grace Period & Demo Mode -->
+      <section class="card">
+        <div class="card-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <h2>Attention Grace Period & Demo Mode</h2>
+        </div>
+
+        <div class="form-group">
+          <label for="graceMinutes">Normal Grace Period (Minutes)</label>
+          <div class="input-with-button">
+            <input type="number" id="graceMinutes" min="0.5" step="0.5" max="60" value="10">
+            <button type="button" id="testNotificationBtn" class="btn btn-secondary btn-sm">Test notification</button>
+          </div>
+          <span class="field-hint">A gentle nudge is only sent if you stay continuously on distracting content longer than this period. Default is 10 min.</span>
+          <div id="testNotificationResult" class="test-result"></div>
+        </div>
+
+        <div class="demo-box" style="margin-top: 16px; padding: 14px; background: rgba(217, 119, 6, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <label for="demoModeCheckbox" style="font-weight: 600; color: #fbbf24; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="demoModeCheckbox">
+              <span>Enable Demo Mode (Nudge in 10s)</span>
+            </label>
+            <button type="button" id="resetDemoBtn" class="btn btn-secondary btn-sm">Reset demo</button>
+          </div>
+          <div class="form-group" style="margin-top: 8px;">
+            <label for="graceSeconds">Demo Grace Period (Seconds)</label>
+            <input type="number" id="graceSeconds" min="5" max="300" step="1" value="10" style="max-width: 140px;">
+            <span class="field-hint">When Demo Mode is on, effective grace is 10s (or custom seconds), and cooldown is reduced from 15 min to 60 sec so the demo can be easily repeated.</span>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 16px;">
+          <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500;">
+            <input type="checkbox" id="focusModeCheckbox" checked>
+            <span>Digital Wellbeing Focus Mode (Turn off distracting tabs on return)</span>
+          </label>
+          <span class="field-hint">When you choose "Return to work", the distracting website is closed and turned off until your focus session ends.</span>
+        </div>
+      </section>
+
+      <!-- Section 4: Domain Rule Lists -->
+      <section class="card">
+        <div class="card-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="8" y1="6" x2="21" y2="6"></line>
+            <line x1="8" y1="12" x2="21" y2="12"></line>
+            <line x1="8" y1="18" x2="21" y2="18"></line>
+            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+          </svg>
+          <h2>Custom Domain Classifications</h2>
+        </div>
+        
+        <div class="domains-grid">
+          <div class="form-group">
+            <div class="label-row">
+              <label for="productiveDomains">Productive Domains</label>
+              <button type="button" id="resetProductiveBtn" class="link-btn">Reset Defaults</button>
+            </div>
+            <textarea id="productiveDomains" rows="8" placeholder="github.com&#10;leetcode.com&#10;stackoverflow.com"></textarea>
+            <span class="field-hint">One domain per line. Subdomains are automatically included.</span>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="distractingDomains">Distracting Domains</label>
+              <button type="button" id="resetDistractingBtn" class="link-btn">Reset Defaults</button>
+            </div>
+            <textarea id="distractingDomains" rows="8" placeholder="instagram.com&#10;facebook.com&#10;x.com"></textarea>
+            <span class="field-hint">Shorts & Reels paths are automatically recognized as distracting.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Web Dashboard Origin -->
+      <section class="card">
+        <div class="card-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <h2>Web Dashboard Origin</h2>
+        </div>
+        <div class="form-group">
+          <label for="dashboardUrl">Dashboard URL</label>
+          <input type="text" id="dashboardUrl" value="http://localhost:5173/">
+          <span class="field-hint">The web dashboard connects to Sakshi via the window.postMessage bridge.</span>
+        </div>
+      </section>
+
+      <!-- Section 6: Data Management & Actions -->
+      <section class="card card-danger">
+        <div class="card-header">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="3 6 5 6 21 6"></polyline>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          </svg>
+          <h2>Storage Management</h2>
+        </div>
+        <div class="danger-row">
+          <div>
+            <strong>Clear all session logs & caches</strong>
+            <p class="field-hint">Deletes all recorded timelines, past sessions, and classification cache from this browser.</p>
+          </div>
+          <button type="button" id="clearDataBtn" class="btn btn-danger">Clear All Data</button>
+        </div>
+      </section>
+
+      <div class="actions-bar">
+        <button type="button" id="saveBtn" class="btn btn-primary btn-lg">Save Settings</button>
+        <span id="saveStatus" class="save-status"></span>
+      </div>
+    </main>
+  </div>
+
+  <script src="rules.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

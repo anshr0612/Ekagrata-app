@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" fill="#fef3c7" rx="16"/>
+  <!-- Notebook Cover -->
+  <rect x="55" y="35" width="95" height="130" rx="6" fill="#d97706"/>
+  <!-- Spine -->
+  <rect x="55" y="35" width="16" height="130" rx="3" fill="#b45309"/>
+  <!-- Bookmark ribbon -->
+  <path d="M 85 35 L 85 85 L 91 79 L 97 85 L 97 35 Z" fill="#f59e0b"/>
+  <!-- Elastic band -->
+  <rect x="135" y="35" width="6" height="130" fill="#92400e"/>
+  <!-- Embossed symbol -->
+  <circle cx="105" cy="100" r="14" fill="#fde68a" opacity="0.8"/>
+  <circle cx="105" cy="100" r="4" fill="#b45309"/>
+</svg>

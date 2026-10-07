@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakshi - Witness Attention</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo-orb"></div>
+        <div class="brand-text">
+          <h1>Sakshi</h1>
+          <span class="tagline">Witness your attention</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div id="demoChip" class="demo-chip hidden" title="Demo mode active">
+          <span class="chip-pulse"></span>
+          <span id="demoChipText">Demo mode: 10s</span>
+        </div>
+        <button type="button" class="icon-btn" title="Quick Settings" id="gearBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0 2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Quick Settings Dropdown (Gear Menu) -->
+    <div id="gearMenu" class="gear-menu hidden">
+      <div class="gear-header">
+        <span class="gear-title">Quick Settings</span>
+        <a href="options.html" target="_blank" class="gear-link">All Options ➔</a>
+      </div>
+      <div class="gear-item">
+        <label for="popupDemoModeCheckbox" class="gear-toggle-label">
+          <span>Demo mode</span>
+          <input type="checkbox" id="popupDemoModeCheckbox">
+        </label>
+      </div>
+      <div class="gear-item">
+        <label for="popupFocusModeCheckbox" class="gear-toggle-label">
+          <span>Focus Mode (Turn off sites)</span>
+          <input type="checkbox" id="popupFocusModeCheckbox" checked>
+        </label>
+      </div>
+      <div class="gear-item" id="popupGraceSecRow">
+        <label for="popupGraceSecondsInput">Grace (seconds):</label>
+        <input type="number" id="popupGraceSecondsInput" min="5" max="300" step="1" value="10" class="input-compact">
+      </div>
+      <div class="gear-actions">
+        <button type="button" id="popupResetDemoBtn" class="btn btn-outline btn-sm">Reset demo</button>
+      </div>
+    </div>
+
+    <!-- State 1: IDLE VIEW -->
+    <main id="idleView" class="view">
+      <form id="sessionForm">
+        <div class="field-group">
+          <label for="intentionInput">What is your intention?</label>
+          <textarea id="intentionInput" rows="2" placeholder="e.g. Finish writing data visualization module" required></textarea>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="durationInput">Duration (min)</label>
+            <input type="number" id="durationInput" min="1" max="360" value="25" required>
+          </div>
+          <div class="field-group">
+            <label for="graceInput">Grace (min)</label>
+            <input type="number" id="graceInput" min="0.5" step="0.5" max="60" value="10" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="startBtn">
+          Begin Session
+        </button>
+      </form>
+    </main>
+
+    <!-- State 2: ACTIVE VIEW -->
+    <main id="activeView" class="view hidden">
+      <div class="intention-card">
+        <span class="card-label">INTENTION</span>
+        <p class="intention-text" id="activeIntentionText">Loading...</p>
+      </div>
+
+      <div class="timer-section">
+        <div class="countdown" id="timerDisplay">--:--</div>
+        <span class="timer-subtext" id="timerSubtext">remaining</span>
+      </div>
+
+      <div class="presence-badge" id="categoryBadge">
+        <div class="status-dot" id="categoryDot"></div>
+        <span class="status-label" id="categoryLabel">Observing...</span>
+      </div>
+
+      <button type="button" class="btn btn-outline" id="endBtn">
+        End Session
+      </button>
+    </main>
+
+    <!-- Footer Links -->
+    <footer class="footer">
+      <a href="#" id="openDashboardLink" class="dashboard-link">
+        Open Web Dashboard
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
