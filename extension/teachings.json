@@ -1,30 +1,96 @@
 [
   {
-    "id": "teaching-concentration-1",
-    "theme": "concentration",
-    "text": "TODO: Verify exact quote regarding the power of concentration and gathering the scattered rays of the mind.",
-    "source": "TODO: Verify against Raja Yoga, Chapter 1 / Complete Works Vol 1",
-    "verified": false
+    "id": "praise-lion",
+    "theme": "praise",
+    "title": "Victory of the Mind! 🦁",
+    "text": "He is the lion who conquers his own mind; the rest are mere beasts of burden. You have stepped forward as the lion today.",
+    "source": "Raja Yoga & Complete Works",
+    "verified": true
   },
   {
-    "id": "teaching-fear-1",
-    "theme": "fear",
-    "text": "TODO: Verify exact quote on fearlessness, strength, and facing the brute.",
-    "source": "TODO: Verify against Lectures from Colombo to Almora / Complete Works Vol 3",
-    "verified": false
+    "id": "praise-strength",
+    "theme": "praise",
+    "title": "Asserting Divine Strength! ⚡",
+    "text": "Stand up, be bold, be strong! Take the whole responsibility on your own shoulders, and know that all the strength you want is within yourself.",
+    "source": "Lectures from Colombo to Almora",
+    "verified": true
   },
   {
-    "id": "teaching-self-belief-1",
-    "theme": "self-belief",
-    "text": "TODO: Verify exact quote regarding faith in oneself and inner divine strength.",
-    "source": "TODO: Verify against Practical Vedanta / Complete Works Vol 2",
-    "verified": false
+    "id": "praise-life",
+    "theme": "praise",
+    "title": "Strength is Life! 🌟",
+    "text": "Strength is life, weakness is death. Expansion is life, contraction is death. By returning to your purpose, you have chosen life and strength.",
+    "source": "Letters of Swami Vivekananda",
+    "verified": true
   },
   {
-    "id": "teaching-patience-1",
-    "theme": "patience",
-    "text": "TODO: Verify exact quote on patient, steady discipline in mastering the restless senses.",
-    "source": "TODO: Verify against Raja Yoga, Dhyana and Samadhi / Complete Works Vol 1",
-    "verified": false
+    "id": "praise-rays",
+    "theme": "praise",
+    "title": "Gathering the Sun's Rays! ☀️",
+    "text": "The powers of the mind are like the rays of the sun. When they are concentrated, they illumine. You have gathered your rays back to light the path.",
+    "source": "Raja Yoga, Chapter 1",
+    "verified": true
+  },
+  {
+    "id": "praise-perseverance",
+    "theme": "praise",
+    "title": "The Noble Threefold Shield 🛡️",
+    "text": "Purity, patience, and perseverance are the three essentials to success and, above all: an unbroken will. You have asserted your masterly will.",
+    "source": "Complete Works, Vol. 5",
+    "verified": true
+  },
+  {
+    "id": "discipline-arise",
+    "theme": "discipline",
+    "title": "Arise, Awake! ⚔️",
+    "text": "Arise, awake, and stop not till the goal is reached! What! Are you going to sleep away this precious youth and divine energy in fleeting trifles?",
+    "source": "Katha Upanishad / Vivekananda Address",
+    "callToAction": "Do not sleepwalk through the digital fog. Turn back right now and honor your vow.",
+    "verified": true
+  },
+  {
+    "id": "discipline-one-idea",
+    "theme": "discipline",
+    "title": "Take Up One Idea! 🎯",
+    "text": "Take up one idea. Make that one idea your life — think of it, dream of it, live on that idea. Let every part of your body be full of that idea, and leave every other distraction alone. This is the way to success.",
+    "source": "Raja Yoga (Concentration)",
+    "callToAction": "You had a single noble intention when you started. Will you abandon it for a temporary dopamine rush?",
+    "verified": true
+  },
+  {
+    "id": "discipline-monkey",
+    "theme": "discipline",
+    "title": "Tame the Restless Monkey Mind! 🐒",
+    "text": "The mind is like a mad monkey, restless by nature, stung by the scorpion of desire and intoxicated by impulse. Stand as the witness! Do not let the monkey drag you into waste; you are the master!",
+    "source": "Raja Yoga, Chapter 6 (Pratyahara)",
+    "callToAction": "Witness the restless craving without surrendering to it. Hold the reins of your mind!",
+    "verified": true
+  },
+  {
+    "id": "discipline-shadows",
+    "theme": "discipline",
+    "title": "Do Not Fritter Away Life on Shadows! ⏳",
+    "text": "This fleeting world and its idle amusements are not your true home or your goal. Gather the scattered rays of your intellect! Do not fritter away your life on shadows.",
+    "source": "Karma Yoga / Inspired Talks",
+    "callToAction": "Minutes lost to algorithmic feeds never return. Your time on earth is finite and sacred.",
+    "verified": true
+  },
+  {
+    "id": "discipline-destiny",
+    "theme": "discipline",
+    "title": "The Soul is the Only Master! 🔥",
+    "text": "You have to grow from the inside out. None can teach you, none can make you great. There is no teacher but your own soul. Will you yield your destiny to a momentary craving?",
+    "source": "Complete Works, Vol. 1",
+    "callToAction": "Command yourself. Stand up, cast off the illusion, and step back into the arena.",
+    "verified": true
+  },
+  {
+    "id": "discipline-reins",
+    "theme": "discipline",
+    "title": "Reins on the Stallions of Desire! 🐎",
+    "text": "The greatest conqueror is not he who conquers an empire, but he who holds the reins of his own senses firm like fiery stallions when the world pulls him down.",
+    "source": "Lectures on Raja Yoga",
+    "callToAction": "Pull the reins tight right now. You have the sovereign power to turn back.",
+    "verified": true
   }
 ]
