@@ -1,5 +1,5 @@
 # Ekāgratā (एकाग्रता) — Mindful Attention & Focus System
-
+  Open http://localhost:5173 in your browser.
 > *"Take up one idea. Make that one idea your life — think of it, dream of it, live on that idea."*  
 > — **Swami Vivekananda** (*Raja Yoga*)
 
